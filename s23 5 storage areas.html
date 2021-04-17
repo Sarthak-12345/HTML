@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      Name <br />
+      <input type="text" name="uname" id="uname"><br>
+      Email <br>
+      <input type="text" name="umail"><br>
+      <input type="button" value="setDataInSessionStorage" id="button1">
+      <input type="button" value="getDataFormSessionStorage" id="button2">
+    </form>
+    <script type="text/javascript">
+      document.getElementById("button1").addEventListener("click", fun1);
+      function fun1(){
+       var uname = document.getElementById("uname").value;
+       var uemail = document.getElementById("uemail").value;
+       localStorage.uname = uname;
+       localStorage.uemail = uemail;
+       document.getElementById("uname").value = "";
+       document.getElementById("uemail").value = "";
+       alert("Data Storted in session Storage");
+      }
+      document.getElementById("button2").addEventListener("click", fun2;)
+    function fun2(){
+   var uname = localStorage.uname;
+   var uname = localStorage.uemail;
+   document.getElementById("uname").value = uname;
+   document.getElementById("uemail").value = uemail;
+   }
+
+    </script>
+
+  </body>
+</html>
